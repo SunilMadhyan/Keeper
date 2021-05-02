@@ -1,0 +1,25 @@
+<header class='topnav'>
+  <div class="topnav-p1">
+    <span class="menuIcon" (click) = "notifyChild()"><i class="fa fa-bars"></i></span>
+    <span class="logo"><i class="fa fa-sticky-note"></i></span>
+    <span class="logoText">{{title}}</span>
+  </div>
+  <div class="topnav-p2 search-container">
+    <form>
+      <input class="search" type="text" placeholder="Search"/>
+      <button type="submit"> <i class="fa fa-search"></i> </button>
+    </form>
+  </div>
+  <div class="topnav-p4 activity-container">
+    <span><i class="fa fa-sync"></i></span>
+    <span><i class="fa fa-list"></i></span>
+    <span><i class="fa fa-cog"></i></span>
+  </div>
+  <div class="topnav-p3 activity-container">
+    <span class=""><i class="fa fa-star "></i></span>
+    <span class="userProfile"><i class="fa fa-users"></i></span>
+  </div>
+</header>
+<div>
+  <app-side-nav></app-side-nav>
+</div>

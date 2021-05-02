@@ -1,0 +1,52 @@
+.bodyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    > :nth-child(2) {
+        flex: auto;
+    }
+}
+.side-nav {
+    font-size: 20px;
+    i {
+        padding: 0 10px;
+    }
+    div {
+        border-radius: 0 50px 50px 0;
+        padding: 15px 10px;
+        font-size: 20px;
+        cursor: pointer;
+        span {
+            transition: all 250ms  ;
+            transform:translate(0);
+            opacity: 1;
+        }
+        span::after {
+            content: "";
+            padding: 20px;
+        }
+        i {
+            margin: 10px 10px;
+        }
+        &.active, &.active:hover  {
+            background-color: #feefc3;
+        }
+        &:hover {
+            background-color: #f1f3f4
+        }
+
+    }
+
+    &.hidden > div {
+        border-radius: 50px;
+        span {
+            transform:translate(9999px);
+            opacity: 0;
+            
+        }
+    }
+    &.hidden-block > div {
+        span {
+            display: none;            
+        }
+    }
+}

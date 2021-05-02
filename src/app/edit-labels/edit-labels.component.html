@@ -1,0 +1,20 @@
+<div class="modal" [hidden]="!isModalVisible">
+    <div class="modal-container">
+        <div class="modal-header">Edit labels</div>
+        <div class="modal-body">
+            <div>
+                <i class="fa fa-times"></i>
+                <input #newLabelInputBox type="text" class="newLabelInputbox" [(ngModel)]="newLabel" id="newLabel" placeholder="Create new label">
+                <i class="fa fa-check" (click)="addNewLabel()"></i>
+            </div>
+            <div *ngFor="let label of userLabels">
+                <i class="fa fa-trash" (click)="removeLabel($event.target.nextSibling.id)"></i>
+                <input #updateLabel type="text" class="updateLabelInputBox" value="{{label.name}}" id="{{label.name}}" placeholder="Enter label name" (keyup.enter)="updateLabelName($event.target.id, $event.target.value)">
+                <i class="fa fa-check" (click)="updateLabelName($event.target.previousSibling.id, $event.target.previousSibling.value)"></i>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="no-style" data-dismiss="modal" (click)="toggleModal()">Close</button>
+        </div>
+    </div>
+</div>

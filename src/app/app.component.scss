@@ -1,0 +1,96 @@
+.topnav {
+    padding: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #5f6368;
+    margin-bottom: .5em;
+    > :nth-child(1) {
+        flex: 10%;
+    }
+    > :nth-child(2) {
+        flex: 50%;
+        text-align: center;
+    }
+    > :nth-child(3) {
+        flex: 15%;
+        text-align: end;
+    }
+    > :nth-child(4) {
+        flex: auto;
+        text-align: end;
+    }
+    span {
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        color: #5f6368;
+        opacity: 1;
+        font-size: 28px;
+        padding: 4px 4px;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(60,64,67,0.08);
+            outline: none;
+        }
+    }
+    .topnav-p1 {
+        display: inline;
+        padding-right: 30px;
+        .logoText {
+            padding: 0 4px;
+            color: #5f6368;
+            opacity: 1;
+            font-family: 'Product Sans',Arial,sans-serif;
+            &:hover {
+                background-color: white;
+                outline: none;
+            }
+        }
+        .logo {
+            width: 24px;
+            height: 24px;
+            color:#5f6368;
+        }
+    }
+
+    .topnav-p2 {
+        &.search-container {
+            height: 34px;
+            border-radius: 20px;
+            background-color: #f1f3f4;
+            input[type=text] {
+                border: none;
+                border-radius: 5px;
+                font-size: 24px;
+                width: 90%;
+                height: 100%;
+                padding: 0px 5px;
+                background: transparent;
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+                margin-top: 4px;
+            }
+            button[type=submit], i {
+                font-size: 18px;
+                background: transparent;
+                float:left;
+                border: none;
+                margin: 4px 2px;
+                &:focus {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .activity-container {
+        padding: 0 10px;
+    }
+
+    .nightMode {
+        background-color: black;
+        color: white;
+    }
+}

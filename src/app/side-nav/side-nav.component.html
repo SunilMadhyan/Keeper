@@ -1,0 +1,10 @@
+<div class="bodyContainer">
+    <div class="side-nav" [class.hidden]="!displaySideNavText" [class.hidden-block]="!removeSideNavText" *ngIf="userLabels">
+        <div *ngFor="let label of userLabels.primaryLabels" [ngClass]="{'active': label.active}"><i class="{{label.icon}}"></i><span>{{label.name}}</span></div>
+        <div *ngFor="let label of userLabels.userLabels" [ngClass]="{'active': label.active}"><i class="{{label.icon}}"></i><span>{{label.name}}</span></div>
+        <div *ngFor="let label of userLabels.secondaryLabels" [ngClass]="{'active': label.active}" (click)="label.name==='Edit Labels' && editLabelModal.toggleModal()"><i class="{{label.icon}}"></i><span>{{label.name}}</span></div>
+    </div>
+    <div class="mainBody" *ngIf="userLabels">
+        <app-edit-labels (labelEmitter$)="addLabel($event)" (labelUpdateEmitter$)="updateLabelName($event)" (labelRemoveEmitter$)="removeLabel($event)" [userLabels]="userLabels.userLabels"></app-edit-labels>
+    </div>
+</div>

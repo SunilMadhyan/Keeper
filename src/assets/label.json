@@ -1,0 +1,15 @@
+{
+    "primaryLabels": [
+        {"name": "Notes", "icon": "fa fa-clipboard", "active": "true"},
+        {"name": "Reminders", "icon": "fa fa-bell"}
+    ],
+    "userLabels": [
+        {"name": "Project Ideas", "icon": "fa fa-sticky-note"},
+        {"name": "Goal 2021", "icon": "fa fa-sticky-note"}
+    ],
+    "secondaryLabels": [
+        {"name": "Edit Labels", "icon": "fa fa-edit"},
+        {"name": "Archive", "icon": "fa fa-archive"},
+        {"name": "Trash", "icon": "fa fa-trash"}
+    ]
+}
